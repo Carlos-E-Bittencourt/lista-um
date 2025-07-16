@@ -13,7 +13,6 @@
         <button type="submit" name="informar_fibonacci">Informar</button>
     </form>
 
-
     <?php
     
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
