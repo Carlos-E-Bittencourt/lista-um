@@ -17,10 +17,21 @@
     
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
-        if(isset($_POST['verificar_primo'])){
-            $numero = $_POST['numero_primo'];
+        if(isset($_POST['informa_pares'])){
+            $numero = $_POST['pares_entre'];
+            $pares = [];
 
+            for($i = 1; $i < $numero; $i++){
+                if($i % 2 == 0){
+                    $pares[] = $i;
+                }
+            }
+            echo "Os números pares entre 1 e $numero são: <br>";
+            foreach ($pares as $nums){
+                echo $nums . "<br>";
+            };
         }
+    }
     ?>
 </body>
 </html>
