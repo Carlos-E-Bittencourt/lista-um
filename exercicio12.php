@@ -19,10 +19,15 @@
 
         if(isset($_POST['contar_vogais'])){
             $palavra = $_POST['vogais'];
-            $vogais = "aeiouAEIOU";
+            $vogais = array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U");
             $contador = null;
 
-            for($i = )
+            for($i = 0; $i < strlen($palavra); $i++){
+                if(in_array($palavra[$i], $vogais)){
+                    $contador++;
+                }
+            }
+            echo "Existem $contador vogais na palavra $palavra.";
         }
     }
     ?>
